@@ -11,24 +11,13 @@ About
 
 The script `run_lacosmic.py` wraps the IRAF task `LACosmic`, written by Pieter G. van Dokkum (http://www.astro.yale.edu/dokkum/lacosmic/). The wrapper is tweaked specifically for Hubble WFC3/UVIS FITS-format images of single white dwarf stars. If you use it for other targets/instruments, expect some experimentation!
 
-It generates cosmic-ray cleaned FITS (`*clean.fits`) and the cosmic-ray mask FITS 
-(`*mask.fits`), and a diagnostic PNG file that displays on a single page 
-the original image, the mask, and the cosmic-ray cleaned image.  
-It presently assumes the source is at the center (usually true in my white dwarf 
-data) so it also displays ‘zoomed-in’ panels of the image center.  Using this PNG you can quickly diagnose whether `LACosmic` did a good job masking the cosmic-rays or did poorly enough that you need adjust parameters and run the script again.
+It generates cosmic-ray cleaned FITS (`*clean.fits`) and the cosmic-ray mask FITS  (`*mask.fits`), and a diagnostic PNG file that displays on a single page the original image, the mask, and the cosmic-ray cleaned image.  It presently assumes the source is at the center (usually true in my white dwarf data) so it also displays ‘zoomed-in’ panels of the image center.  Using this PNG you can quickly diagnose whether `LACosmic` did a good job masking the cosmic-rays or did poorly enough that you need adjust parameters and run the script again.
 
-There is, in fact, a Python version, which is faster than IRAF (yes, crazy, I know!).  
-But unfortunately it is not smart about how it handles the headers of 
-multi-extension FITS. Besides that caveat, the output images of both versions 
-look the same in all my tests.  On a distant future day I may fix the Python 
-version and incorporate it into the wrapper.
+There is, in fact, a Python version, which is faster than IRAF (yes, crazy, I know!).  But unfortunately it is not smart about how it handles the headers of multi-extension FITS. Besides that caveat, the output images of both versions look the same in all my tests.  On a distant future day I may fix the Python version and incorporate it into the wrapper.
 
-Also included in this package are a script that iterates through different
-permutations of parameters so that you can with relative ease find the best
-for your WFC3/UVIS data. This script is named `run_lacosmic_tester.py`.
+Also included in this package are a script that iterates through different permutations of parameters so that you can with relative ease find the best for your WFC3/UVIS data. This script is named `run_lacosmic_tester.py`.
 
-See the doc strings for further information on inputs and outputs for
-`run_lacosmic.py` and `run_lacosmic_tester.py`.
+See the doc strings for further information on inputs and outputs for `run_lacosmic.py` and `run_lacosmic_tester.py`.
 
 
 Install ‘lacosmic’ Package
@@ -59,9 +48,7 @@ the `lacosmic` directory:
 Setup ‘lacosmic’ Package
 --------------------------
 
-Actually, as long as you ran the makefile, you don’t need do anything to setup 
-the ‘lacosmic’ sub-package. The ‘make setup’ command runs `init_setup_lacosmic.py`, 
-which does the following:
+Actually, as long as you ran the makefile, you shouldn't need to do anything more. The ‘make setup’ command runs `setup.py` and  `init_setup_lacosmic.py`, which does the following:
 
 1. Creates ‘set_paths.py’, which just contains a dictionary of the absolute
    path to the directory where you put `lacosmic`. 

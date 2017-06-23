@@ -56,8 +56,8 @@ the `lacosmic` directory:
    `examples/`
 
 
-Setup ‘lacosmic’ Sub-Package
-----------------------------
+Setup ‘lacosmic’ Package
+--------------------------
 
 Actually, as long as you ran the makefile, you don’t need do anything to setup 
 the ‘lacosmic’ sub-package. The ‘make setup’ command runs `init_setup_lacosmic.py`, 

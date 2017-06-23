@@ -32,7 +32,7 @@ See the doc strings for further information on inputs and outputs for
 
 
 Install ‘lacosmic’ Package
----------------------------------
+---------------------------
 
 1. git clone the ‘lacosmic’ package to desired location
 
@@ -42,7 +42,6 @@ Install ‘lacosmic’ Package
 
 3. Finally add the PYTHONPATH to your .cshrc file with something like
 
-    # Python paths
     setenv PYTHONPATH ${PYTHONPATH}:/your/path/to/lacosmic/
 
 If the installation went smoothly, you should have the following in
@@ -131,7 +130,7 @@ are free to run the LACosmic wrapper on a whim. Hooray!
    run and start again with adjusted parameters. See Tips Section below.
 
 Tips
-—---
+-----
 
 LACosmic’s four parameters are
     sigclip : Detection limit for cosmic rays.
